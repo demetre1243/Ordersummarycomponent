@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(./images/pattern-background-desktop.svg) no-repeat;
+    background-color: #e0e8ff;
+    font-size: 16px;
+    font-family: "Red Hat Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    text-align: center;
+}
+
+body main {
+    background-color: #fff;
+    width: 648px;
+    height: max-content;
+    border-radius: 16px;
+    flex-shrink: 0;
+}
+
+.hero-img {
+    margin: 0;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 32px 80px;
+    gap: 24px;
+}
+
+.title {
+    color: #1f2f56;
+    font-weight: 900;
+}
+
+.content section {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 32px;
+    background-color: #f5f7ff;
+    padding: 16px 48px;
+    border-radius: 16px;
+}
+
+.year {
+    color: #7280a7;
+}
+
+.change {
+    margin-left: auto;
+    color: #3829e0;
+    font-weight: 900;
+}
+
+.change:hover {
+    font-weight: 700;
+    transition: 300ms ease-in-out;
+    text-decoration: none;
+}
+
+.payment {
+    width: 100%;
+    border: none;
+    background-color: #3829e0;
+    color: #f5f7ff;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.payment:hover {
+    background-color: #6255e7;
+    transition: 300ms ease-in-out;
+    border: none;
+}
+
+.cancel {
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    color: #7280a7;
+    font-weight: 700;
+}
+
+.cancel:hover {
+    color: #1f2f56;
+    font-weight: 900;
+    transition: 300ms ease-in-out;
+    border: none;
+}
+
+@media (max-width: 576px) {
+    body {
+        background: url(./images/pattern-background-mobile.svg) no-repeat;
+        background-color: #e0e8ff;
+        min-height: 100vh;
+    }
+
+    main {
+        width: 576px;
+    }
+
+    .content section {
+        width: max-content;
+        justify-content: center;
+        gap: 13px;
+        align-items: center;
+        padding: 14px 20px;
+    }
+
+    .change {
+        margin: 0;
+    }
+
+    .payment {
+        width: max-content;
+        padding: 14px 140px;
+    }
+
+    .cancel {
+        width: 100%;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 1140px) {
+    main {
+        width: 576px;
+    }
+
+    .content section {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .payment {
+        width: 100%;
+        padding: 16px 72px;
+    }
+}
